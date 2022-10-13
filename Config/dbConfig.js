@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect("mongodb+srv://admin:iRTOFhhnOmbYeZli@job-portal.9img8oy.mongodb.net/Job-Portal?retryWrites=true&w=majority")
+mongoose.connect(process.env.MONGODB_URL)
     .then(() => {
         console.log('Database connect successfully'.bold.cyan)
     })
