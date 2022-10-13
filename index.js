@@ -8,7 +8,7 @@ const userRoute = require("./Routes/user.route")
 const adminRoute = require("./Routes/admin.route")
 const generalRoute = require("./Routes/general.route")
 const candidateRoute = require("./Routes/candidate.route")
-// const hiringManagerRoute = require("./Routes/hiringManager.route")
+const hiringManagerRoute = require("./Routes/hiringManager.route")
 
 dotenv.config()
 app.use(express.json())
@@ -18,7 +18,7 @@ app.use('/api/', generalRoute)
 app.use('/api/user', userRoute)
 app.use('/api/admin', adminRoute)
 app.use('/api/', candidateRoute)
-// app.use('/api/', hiringManagerRoute)
+app.use('/api/', hiringManagerRoute)
 
 // Database Connect
 require('./Config/dbConfig')
