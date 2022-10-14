@@ -19,7 +19,7 @@ const upload = multer({
         fileSize: 2000000 // 2MB
     },
     fileFilter: (req, file, cb) => {
-        if (file.mimetype === "image/jpeg") {
+        if (file.mimetype === "image/jpeg" || file.mimetype === "application/pdf") {
             cb(null, true)
         } else {
             cb(new Error("Only pdf file format is accepted."))
