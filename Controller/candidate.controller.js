@@ -60,7 +60,7 @@ exports.applyJob = async (req, res) => {
             return res.status(500).json({ status: 'Failed', error: "Deadline for apply is expired" })
         }
         
-        const result = await service.applyJobService(jobId, applicantId, req.file.filename)
+        const result = await service.applyJobService(jobId, applicantId, req?.file?.filename)
         if (!result) {
             return res.status(401).json({ status: 'Failed', error: "Sorry, couldn't apply for the job." })
         }
